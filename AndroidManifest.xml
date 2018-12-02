@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.webview"
+    android:versionCode="1"
+    android:versionName="1.28" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+
+    <!-- 金斗云   jindouytun -->
+    <!-- 完美金融   wmjr-->
+    <!-- 卡神通   kstlogo-->
+    <!-- 中创科技   zckj-->
+    <!-- 鑫易金融  xyjr-->
+    <!-- 大智慧金融  dzh-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dzh"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- 配置KEY 2014-7-5 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sGFSyZlrvnHGr9GipH70G6Nd" />
+
+        <activity
+            android:name="com.example.webview.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocationActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".WebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".CardShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".CardMainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".CardShow_DtlInfoActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".LineLoanShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".CardApplyQueryActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.droid.Activity01"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".LoanShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".AddQuotaShowActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".AddQuotaShow1Activity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".TabHostActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".WebViewBBSActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".FindPwdActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".RegisterActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <!-- 声明百度定位API的定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service android:name="com.service.CardLogService" >
+            <intent-filter>
+                <action android:name="com.service.CardLogService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
